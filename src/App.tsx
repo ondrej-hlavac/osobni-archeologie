@@ -1,10 +1,10 @@
 import React from 'react';
 import { ChakraProvider, Flex, Heading, Link } from '@chakra-ui/react';
-import './App.css';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import { routes } from './constants/routes';
 import DetailPage from './pages/DetailPage';
+import './App.css';
 
 // import logo from './logo.svg';
 /* <img src={logo} className="App-logo" alt="logo" /> */
@@ -28,9 +28,6 @@ function App() {
           <Route path={routes.HOME}>
             <Homepage />
           </Route>
-          {/* <ProtectedRoute path={routes.HOME}>
-          <DevicesPage />
-        </ProtectedRoute> */}
         </Switch>
       </Router>
     </ChakraProvider>

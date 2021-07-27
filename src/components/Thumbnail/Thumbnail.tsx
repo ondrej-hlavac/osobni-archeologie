@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Image, Button, Link, Flex, Center } from '@chakra-ui/react';
 import { routes } from '../../constants/routes';
+import thumb from '../../assets/images/thumb.jpg';
 
 const Thumbnail = () => {
   return (
     <Box border="1px solid black" p={4}>
       <Center>
-        <Image src="https://fakeimg.pl/600x500/?text=.obj&font=noto" alt="placeholder" mb={4} />
+        <Image src={thumb} alt="placeholder" mb={4} />
       </Center>
       <Flex spacing={6}>
         <Button colorScheme="teal" size="xs" m={1}>
