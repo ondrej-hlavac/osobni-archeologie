@@ -5,13 +5,16 @@ import Homepage from './pages/Homepage';
 import { routes } from './constants/routes';
 import DetailPage from './pages/DetailPage';
 import './App.css';
+import { customTheme } from './style/theme';
+import Fonts from './style/Fonts';
 
 // import logo from './logo.svg';
 /* <img src={logo} className="App-logo" alt="logo" /> */
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={customTheme}>
+      <Fonts />
       <Router>
         <Flex p={{ base: 4, md: 8 }} grow={1} zIndex={99} justifyContent="center" borderBottom="1px solid #000000">
           <Link href={routes.HOME} mx={0}>
