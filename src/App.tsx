@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChakraProvider, Flex, Heading, Link } from '@chakra-ui/react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import { routes } from './constants/routes';
 import DetailPage from './pages/DetailPage';
@@ -21,14 +21,12 @@ function App() {
           </Link>
         </Flex>
 
-        <Switch>
-          <Route path={routes.DETAIL}>
-            <DetailPage />
-          </Route>
-          <Route path={routes.HOME}>
-            <Homepage />
-          </Route>
-        </Switch>
+        <Route path={routes.HOME} exact>
+          <Homepage />
+        </Route>
+        <Route path={routes.DETAIL}>
+          <DetailPage />
+        </Route>
       </Router>
     </ChakraProvider>
   );
