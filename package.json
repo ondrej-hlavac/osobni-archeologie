@@ -1,7 +1,6 @@
 {
   "name": "osobni-archeologie",
   "version": "0.1.0",
-  "homepage": "./",
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",
     "@emotion/react": "^11",
