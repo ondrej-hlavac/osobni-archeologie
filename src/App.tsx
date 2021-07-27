@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <ChakraProvider>
-      <Router basename="/">
+      <Router>
         {/* <Header /> */}
 
         <Flex p={{ base: 4, md: 8 }} grow={1} zIndex={99} justifyContent="center" borderBottom="1px solid #000000">
@@ -22,6 +22,7 @@ function App() {
         </Flex>
 
         <Switch>
+          <p>test</p>
           <Route exact path={routes.HOME}>
             <Homepage />
           </Route>
