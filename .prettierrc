@@ -3,6 +3,6 @@
   "printWidth": 140,
   "tabWidth": 2,
   "singleQuote": true,
-  "trailingComma": "es5",
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "endOfLine": "auto"
 }

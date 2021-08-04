@@ -1,57 +1,57 @@
 import { ChakraTheme, extendTheme } from '@chakra-ui/react';
-import { mode } from "@chakra-ui/theme-tools";
+import { mode } from '@chakra-ui/theme-tools';
 
 export const customTheme = extendTheme<ChakraTheme>({
   fonts: {
     heading: 'Source Code Pro',
-    body: 'Source Code Pro'
+    body: 'Source Code Pro',
   },
   styles: {
     global: (props) => ({
       body: {
-        bg: mode("white", "blue.800")(props),
-        color: mode('purple.900', 'white')(props)
+        bg: mode('white', 'blue.800')(props),
+        color: mode('purple.900', 'white')(props),
       },
       a: {
-        color: "purple.900"
+        color: 'purple.900',
       },
       ol: {
-        lineHeight: "69px",
-        fontSize: "20px",
+        lineHeight: '69px',
+        fontSize: '20px',
         marker: {
-          color: "red"
-        }
+          color: 'red',
+        },
       },
       hr: {
         borderTopColor: 'purple.900!important',
-        opacity: "1!important",
-        borderTopWidth: "3px!important",
-        borderBottomWidth: "0"
-      }
-    })
+        opacity: '1!important',
+        borderTopWidth: '3px!important',
+        borderBottomWidth: '0',
+      },
+    }),
   },
   components: {
     Heading: {
       baseStyle: (props) => ({
-        textDecoration: "underline",
-        fontSize: "69px",
+        textDecoration: 'underline',
+        fontSize: '69px',
         color: mode('purple.900', 'white')(props),
         fontWeight: 400,
       }),
     },
     OrderedList: {
       baseStyle: {
-        lineHeight: "34px",
-      }
+        lineHeight: '34px',
+      },
     },
     Text: {
       baseStyle: {
         fontWeight: 400,
-      }
-    }
+      },
+    },
   },
   breakpoints: {
-    lg: '1540px'
+    lg: '1540px',
   },
-  initialColorMode: "light",
-})
+  initialColorMode: 'light',
+});

@@ -7,6 +7,7 @@ import DetailPage from './pages/DetailPage';
 import './App.css';
 import { customTheme } from './style/theme';
 import Fonts from './style/Fonts';
+import Administration from './pages/Administration';
 
 // import logo from './logo.svg';
 /* <img src={logo} className="App-logo" alt="logo" /> */
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path={routes.DETAIL}>
             <DetailPage />
+          </Route>
+          <Route path={routes.ADMIN}>
+            <Administration />
           </Route>
         </Switch>
       </Router>
