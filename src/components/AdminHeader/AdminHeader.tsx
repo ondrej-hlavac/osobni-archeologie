@@ -17,14 +17,16 @@ const AdminHeader = ({ showForm, showAddForm }: AdminHeaderProps) => {
       {!showAddForm && (
         <Button
           onClick={showForm}
-          position="fixed"
+          position={{ base: 'fixed', md: 'relative' }}
           bottom={8}
+          ml={{ base: 0, md: 8 }}
           bg={'purple.700'}
           color="white"
           fontSize={30}
           width="70px"
           height="70px"
-          left="calc(50% - 35px)"
+          left={{ base: 'calc(50% - 35px)', md: 0 }}
+          zIndex={99}
           _hover={{ bg: 'pink.700' }}
         >
           +

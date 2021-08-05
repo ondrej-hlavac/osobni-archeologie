@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Flex } from '@chakra-ui/react';
 import AdminAddForm from '../../components/AdminAddForm';
 import AdminHeader from '../../components/AdminHeader';
+import AdminList from '../../components/AdminList';
 
 const Administration = () => {
   const [showAddForm, setAddForm] = useState(false);
@@ -15,11 +16,12 @@ const Administration = () => {
   };
 
   return (
-    <Container maxW="1200px">
+    <Container maxW="1000px">
       {/* HEADER */}
       <AdminHeader showForm={showForm} showAddForm={showAddForm} />
 
       {/* LIST */}
+      <AdminList />
 
       {/* ADD FORM */}
       <Flex
