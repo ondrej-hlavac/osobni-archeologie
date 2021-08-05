@@ -4,7 +4,7 @@ import AddedTags from '../../../AdminAddForm/components/AddedTags';
 
 const AdminListItem = () => {
   return (
-    <Flex mb={2} justifyContent="space-between" border="1px solid gray" borderRadius={8} p={4}>
+    <Flex direction={{ base: 'column', md: 'row' }} mb={2} justifyContent="space-between" border="1px solid gray" borderRadius={8} p={4}>
       <Image src="https://fakeimg.pl/250x100/" />
       <Flex direction="column" flexGrow={1} ml={4}>
         <Heading as="h6">Název</Heading>
