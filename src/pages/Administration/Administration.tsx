@@ -31,7 +31,7 @@ const Administration = () => {
         zIndex={99}
         width="100%"
         bgColor={'white'}
-        overflow="scroll"
+        overflow="auto"
       >
         <Container maxW="1200px" p="0">
           <AdminAddForm hideForm={hideForm} />
