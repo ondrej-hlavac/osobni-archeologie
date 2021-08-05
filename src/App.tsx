@@ -17,9 +17,12 @@ function App() {
     <ChakraProvider theme={customTheme}>
       <Fonts />
       <Router>
-        <Flex p={{ base: 4, md: 8 }} grow={1} zIndex={99} justifyContent="center" borderBottom="1px solid #000000">
+        <Flex p={{ base: 4, md: 8 }} grow={1} zIndex={99} justifyContent="center" borderBottom="1px solid #000000" position="relative">
           <Link href={routes.HOME} mx={0}>
             <Heading textAlign="center">Osobní Archeologie</Heading>
+          </Link>
+          <Link href={routes.ADMIN} position="absolute" right={8} color="gray.100" _hover={{ color: 'teal.600' }}>
+            atmin
           </Link>
         </Flex>
 

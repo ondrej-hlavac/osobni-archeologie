@@ -51,3 +51,17 @@ html {
     transform: rotate(360deg);
   }
 }
+
+* {
+  transition: all 0.3s ease-in;
+}
+
+*:focus,
+*:active {
+  outline: none;
+  box-shadow: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
