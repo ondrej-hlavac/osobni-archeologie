@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Button, Center, Image, Link } from '@chakra-ui/react';
+import { Box, Center, Image } from '@chakra-ui/react';
 import { routes } from '../../constants/routes';
 import drivko from '../../assets/images/placeholders/drivko.png';
+import Tag from '../Tag';
 
 const Detail = () => {
   return (
@@ -9,36 +10,9 @@ const Detail = () => {
       <Center>
         <Image src={drivko} alt="placeholder" objectFit="cover" />
       </Center>
-      <Button colorScheme="teal" size="xs" m={1}>
-        <Link colorScheme="teal" size="xs" href={routes.HOME}>
-          #tag1
-        </Link>
-      </Button>
-      <Button colorScheme="pink" size="xs" m={1}>
-        <Link colorScheme="teal" size="xs" href={routes.HOME}>
-          #tag2
-        </Link>
-      </Button>
-      <Button colorScheme="cyan" size="xs" m={1}>
-        <Link colorScheme="teal" size="xs" href={routes.HOME}>
-          #tag3
-        </Link>
-      </Button>
-      <Button colorScheme="teal" size="xs" m={1}>
-        <Link colorScheme="teal" size="xs" href={routes.HOME}>
-          #tag1
-        </Link>
-      </Button>
-      <Button colorScheme="pink" size="xs" m={1}>
-        <Link colorScheme="teal" size="xs" href={routes.HOME}>
-          #tag2
-        </Link>
-      </Button>
-      <Button colorScheme="cyan" size="xs" m={1}>
-        <Link colorScheme="teal" size="xs" href={routes.HOME}>
-          #tag3
-        </Link>
-      </Button>
+      <Tag color="teal" link path={routes.HOME} label="tag1" />
+      <Tag color="pink" link path={routes.HOME} label="tag2" />
+      <Tag color="purple" link path={routes.HOME} label="tag3" />
     </Box>
   );
 };

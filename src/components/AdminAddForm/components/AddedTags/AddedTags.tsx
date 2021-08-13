@@ -6,7 +6,7 @@ const AddedTags = () => {
   return (
     <Wrap mb={8}>
       <Tag color="teal" />
-      <Tag color="teal" />
+      <Tag color="teal" link />
       <Tag color="teal" />
       <Tag color="teal" />
       <Tag color="teal" />

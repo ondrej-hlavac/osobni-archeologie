@@ -9,7 +9,7 @@ import whiskey from '../../assets/images/placeholders/drivko.png';
 
 const List = () => {
   return (
-    <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+    <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>
       <Thumbnail imageUrl={drivko} />
       <Thumbnail imageUrl={pepsi_2} />
       <Thumbnail imageUrl={naramek} />
