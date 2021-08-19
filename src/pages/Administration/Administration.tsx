@@ -3,9 +3,17 @@ import { Container, Flex } from '@chakra-ui/react';
 import AdminAddForm from '../../components/AdminAddForm';
 import AdminHeader from '../../components/AdminHeader';
 import AdminList from '../../components/AdminList';
+import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
+import AdminTags from '../../components/AdminTags';
+
+const buttonStyle = {
+  fontSize: '30px',
+  textDecoration: 'underline',
+};
 
 const Administration = () => {
   const [showAddForm, setAddForm] = useState(false);
+  let { path, url } = useRouteMatch();
 
   const showForm = () => {
     setAddForm(true);
@@ -18,10 +26,27 @@ const Administration = () => {
   return (
     <Container maxW="1000px">
       {/* HEADER */}
-      <AdminHeader showForm={showForm} showAddForm={showAddForm} />
+      <Flex justifyContent="space-between" alignItems="baseline">
+        <AdminHeader showForm={showForm} showAddForm={showAddForm} />
+        <Link style={buttonStyle} to={`${url}/tags`}>
+          Tagss
+        </Link>
+        <Link style={buttonStyle} to={`${url}`}>
+          Seznam nálezů
+        </Link>
+      </Flex>
 
-      {/* LIST */}
-      <AdminList />
+      {/* ADMIN BODY CONTENT */}
+      <Switch>
+        {/* LIST */}
+        <Route exact path={path}>
+          <AdminList />
+        </Route>
+
+        <Route exact path={`${path}/tags`}>
+          <AdminTags />
+        </Route>
+      </Switch>
 
       {/* ADD FORM */}
       <Flex

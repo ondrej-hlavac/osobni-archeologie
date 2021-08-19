@@ -7,7 +7,7 @@ import pepsi_2 from '../../assets/images/placeholders/pepsi_2.png';
 import naramek from '../../assets/images/placeholders/naramek.png';
 import whiskey from '../../assets/images/placeholders/drivko.png';
 
-const List = () => {
+const FindingsList = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>
       <Thumbnail imageUrl={drivko} />
@@ -26,4 +26,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default FindingsList;

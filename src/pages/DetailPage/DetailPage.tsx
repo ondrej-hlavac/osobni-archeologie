@@ -1,7 +1,7 @@
 import { Container, Divider } from '@chakra-ui/react';
 import React from 'react';
 import Detail from '../../components/Detail';
-import List from '../../components/List';
+import List from '../../components/FindingsList';
 
 const DetailPage = () => {
   return (

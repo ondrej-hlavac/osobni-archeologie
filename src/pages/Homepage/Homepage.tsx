@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Container, Divider, Flex, Input } from '@chakra-ui/react';
 import { SearchIcon } from '@chakra-ui/icons';
-import List from '../../components/List';
+import FindingsList from '../../components/FindingsList';
 import TagsMenu from '../../components/TagsMenu';
 
 const Homepage = () => {
@@ -15,7 +15,7 @@ const Homepage = () => {
         <Button variant="outline">Search</Button>
       </Flex>
       <Divider color="black" my={6} />
-      <List />
+      <FindingsList />
     </Container>
   );
 };

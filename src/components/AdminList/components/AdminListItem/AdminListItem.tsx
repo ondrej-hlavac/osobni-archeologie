@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Flex, Heading, Image } from '@chakra-ui/react';
-import AddedTags from '../../../AdminAddForm/components/AddedTags';
+import TagsList from '../../../TagsList';
 
 const AdminListItem = () => {
   return (
@@ -8,7 +8,7 @@ const AdminListItem = () => {
       <Image src="https://fakeimg.pl/250x100/" />
       <Flex direction="column" flexGrow={1} ml={4}>
         <Heading as="h6">Název</Heading>
-        <AddedTags />
+        <TagsList />
       </Flex>
       <Flex direction="column" justifyContent="space-between">
         <Button color="cyan.400">Edit</Button>
