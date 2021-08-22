@@ -1,5 +1,5 @@
 import React, { FormEvent, useRef } from 'react';
-import { Button, FormControl, FormLabel, Input } from '@chakra-ui/react';
+import { Button, FormControl, FormLabel, Heading, Input } from '@chakra-ui/react';
 import axios from 'axios';
 import { headers, TAGS } from '../../constants/api';
 
@@ -30,19 +30,24 @@ const AdminAddTag = ({ getTags }: AdminAddTagProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} id="form">
-      <FormControl id="label" isRequired mb={4}>
-        <FormLabel>label</FormLabel>
-        <Input ref={labelRef} placeholder="od starýho" />
-      </FormControl>
-      <FormControl id="color" isRequired mb={4}>
-        <FormLabel>Barva (hex)</FormLabel>
-        <Input ref={colorRef} placeholder="4287f5" />
-      </FormControl>
-      <Button type="submit" mb={4}>
-        Uložit
-      </Button>
-    </form>
+    <>
+      <Heading as="h5" mb={4} textDecoration="none">
+        Basic TAG
+      </Heading>
+      <form onSubmit={handleSubmit} id="form">
+        <FormControl id="label" isRequired mb={4}>
+          <FormLabel>label</FormLabel>
+          <Input ref={labelRef} placeholder="od starýho" />
+        </FormControl>
+        <FormControl id="color" isRequired mb={4}>
+          <FormLabel>Barva (hex)</FormLabel>
+          <Input ref={colorRef} placeholder="4287f5" />
+        </FormControl>
+        <Button type="submit" mb={4} colorScheme="green">
+          Přidat TAG
+        </Button>
+      </form>
+    </>
   );
 };
 

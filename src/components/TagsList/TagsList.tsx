@@ -1,9 +1,9 @@
 import React from 'react';
-import { Wrap } from '@chakra-ui/react';
+import { Heading, Wrap } from '@chakra-ui/react';
 import Tag from '../Tag';
 import { routes } from '../../constants/routes';
 
-const TagsList = ({ tags }: any) => {
+const TagsList = ({ tags, headline }: any) => {
   console.log('tags list', tags);
 
   if (!tags) {
@@ -11,11 +11,16 @@ const TagsList = ({ tags }: any) => {
   }
 
   return (
-    <Wrap my={8}>
-      {tags.data?.map((tag: any) => {
-        return <Tag color={`#${tag.data.color}`} key={tag.data.name} link path={routes.HOME} label={tag.data.name} />;
-      })}
-    </Wrap>
+    <>
+      <Heading fontSize="16px" textDecoration="none" as="h3" mt={4}>
+        {headline}
+      </Heading>
+      <Wrap my={8}>
+        {tags.data?.map((tag: any) => {
+          return <Tag color={`#${tag.data.color}`} key={tag.data.name} link path={routes.HOME} label={tag.data.name} />;
+        })}
+      </Wrap>
+    </>
   );
 };
 

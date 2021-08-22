@@ -6,6 +6,7 @@ export const baseApiUrl =
 
 export const FINDINGS = `${baseApiUrl}/findings`;
 export const TAGS = `${baseApiUrl}/tags`;
+export const TIME_TAGS = `${baseApiUrl}/time-tags`;
 
 export const headers = {
   'Access-Control-Allow-Origin': '*',

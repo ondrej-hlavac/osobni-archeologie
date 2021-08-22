@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Flex } from '@chakra-ui/react';
+import { Divider, Flex } from '@chakra-ui/react';
 import TagsList from '../TagsList';
 import AdminAddTag from '../AdminAddTag';
 import axios from 'axios';
-import { headers, TAGS } from '../../constants/api';
+import { headers, TAGS, TIME_TAGS } from '../../constants/api';
+import AdminAddTimeTag from '../AdminAddTimeTag';
 
 const AdminTags = () => {
   const [tags, setTags] = useState([] as any);
+  const [timeTags, setTimeTags] = useState([] as any);
 
   const getTags = async () => {
     const res = await axios.get<any>(TAGS, { headers: headers }).catch((e) => console.log(JSON.stringify(e)));
@@ -16,14 +18,26 @@ const AdminTags = () => {
     console.log(JSON.stringify(res));
   };
 
+  const getTimeTags = async () => {
+    const res = await axios.get<any>(TIME_TAGS, { headers: headers }).catch((e) => console.log(JSON.stringify(e)));
+    if (res) {
+      setTimeTags(res.data);
+    }
+    console.log(JSON.stringify(res));
+  };
+
   useEffect(() => {
     getTags();
+    getTimeTags();
   }, []);
 
   return (
     <Flex direction="column" pb={40} minH={'100vh'}>
       <AdminAddTag getTags={getTags} />
-      <TagsList tags={tags} />
+      <TagsList tags={tags} headline="existující basic TAGs" />
+      <Divider my={4} />
+      <AdminAddTimeTag getTimeTags={getTimeTags} />
+      <TagsList tags={timeTags} headline="existující time TAGs" />
     </Flex>
   );
 };
