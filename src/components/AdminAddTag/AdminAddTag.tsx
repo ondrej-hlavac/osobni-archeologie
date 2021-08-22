@@ -3,7 +3,11 @@ import { Button, FormControl, FormLabel, Input } from '@chakra-ui/react';
 import axios from 'axios';
 import { headers, TAGS } from '../../constants/api';
 
-const AdminAddTag = () => {
+interface AdminAddTagProps {
+  getTags: () => void;
+}
+
+const AdminAddTag = ({ getTags }: AdminAddTagProps) => {
   const labelRef = useRef<HTMLInputElement>(null);
   const colorRef = useRef<HTMLInputElement>(null);
 
@@ -18,6 +22,7 @@ const AdminAddTag = () => {
     console.log('res ', JSON.stringify(res));
 
     resetForm();
+    getTags();
   };
 
   const resetForm = () => {

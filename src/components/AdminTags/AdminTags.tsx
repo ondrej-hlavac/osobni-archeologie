@@ -22,7 +22,7 @@ const AdminTags = () => {
 
   return (
     <Flex direction="column" pb={40} minH={'100vh'}>
-      <AdminAddTag />
+      <AdminAddTag getTags={getTags} />
       <TagsList tags={tags} />
     </Flex>
   );
