@@ -28,10 +28,8 @@ const FindingsList = () => {
     <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>
       {findings.length &&
         findings.map((finding: any) => {
-          console.log('🚀 ~ file: FindingsList.tsx ~ line 31 ~ findings.map ~ finding', JSON.stringify(finding));
-          const { data } = finding;
-          console.log('finding MAPA', JSON.stringify(finding.data));
-          return <Thumbnail key={data.id} findingData={data} imageUrl={drivko} />;
+          const { data, ref } = finding;
+          return <Thumbnail key={ref['@ref'].id} findingData={data} imageUrl={drivko} />;
         })}
     </SimpleGrid>
   );
