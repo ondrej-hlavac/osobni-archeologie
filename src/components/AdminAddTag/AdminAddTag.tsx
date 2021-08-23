@@ -43,7 +43,7 @@ const AdminAddTag = ({ getTags }: AdminAddTagProps) => {
           <FormLabel>Barva (hex)</FormLabel>
           <Input ref={colorRef} placeholder="4287f5" />
         </FormControl>
-        <Button type="submit" mb={4} colorScheme="green">
+        <Button type="submit" mb={4} colorScheme="green" variant="outline">
           Přidat TAG
         </Button>
       </form>

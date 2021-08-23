@@ -37,7 +37,6 @@ const Administration = () => {
       </Flex>
 
       {/* ADMIN BODY CONTENT */}
-      {console.log('🚀 ~ file: Administration.tsx ~ line 43 ~ Administration ~ path', path)}
       <Switch>
         {/* LIST */}
         <Route exact path={path}>

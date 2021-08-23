@@ -91,7 +91,7 @@ const AdminAddTimeTag = ({ getTimeTags }: AdminAddTimeTagProps) => {
           </Select>
         </FormControl>
 
-        <Button type="submit" mb={4} colorScheme="green">
+        <Button type="submit" mb={4} colorScheme="green" variant="outline">
           Přidat time TAG
         </Button>
       </form>

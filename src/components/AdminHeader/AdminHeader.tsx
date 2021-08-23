@@ -6,32 +6,22 @@ interface AdminHeaderProps {
   showAddForm: boolean;
 }
 
-const AdminHeader = ({ showForm, showAddForm }: AdminHeaderProps) => {
-  if (showAddForm) {
-    return <Flex p={8} />;
-  }
-
+const AdminHeader = ({ showForm }: AdminHeaderProps) => {
   return (
-    <Flex p={8}>
-      {/* // TAG SEARCH
-      <FormControl id="tag">
-        <FormLabel>Najdi taB</FormLabel>
-        <Input />
-        <FormHelperText>Tady napiž tek co hledáž</FormHelperText>
-      </FormControl> */}
-
+    <Flex minH="120px">
       <Button
         onClick={showForm}
         position={{ base: 'fixed', md: 'relative' }}
-        bottom={8}
+        bottom={{ base: 8, md: 0 }}
         ml={{ base: 0, md: 8 }}
+        mt={{ base: 0, md: 8 }}
         bg={'purple.700'}
         color="white"
         fontSize={30}
         width="70px"
         height="70px"
         left={{ base: 'calc(50% - 35px)', md: 0 }}
-        zIndex={99}
+        zIndex={91}
         _hover={{ bg: 'pink.700' }}
       >
         +

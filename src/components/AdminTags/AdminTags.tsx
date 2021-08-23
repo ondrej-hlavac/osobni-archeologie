@@ -33,11 +33,13 @@ const AdminTags = () => {
 
   return (
     <Flex direction="column" pb={40} minH={'100vh'}>
+      <Divider my={4} />
       <AdminAddTag getTags={getTags} />
       <TagsList tags={tags} headline="existující basic TAGs" />
       <Divider my={4} />
       <AdminAddTimeTag getTimeTags={getTimeTags} />
       <TagsList tags={timeTags} headline="existující time TAGs" />
+      <Divider my={4} />
     </Flex>
   );
 };
