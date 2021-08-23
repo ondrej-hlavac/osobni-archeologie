@@ -4,8 +4,6 @@ import Tag from '../Tag';
 import { routes } from '../../constants/routes';
 
 const TagsList = ({ tags, headline }: any) => {
-  console.log('tags list', tags);
-
   if (!tags) {
     return null;
   }

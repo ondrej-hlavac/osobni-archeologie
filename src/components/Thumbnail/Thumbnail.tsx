@@ -5,9 +5,11 @@ import Tag from '../Tag';
 
 interface IProps {
   imageUrl: string;
+  findingData: any;
 }
 
-const Thumbnail = ({ imageUrl }: IProps) => {
+const Thumbnail = ({ imageUrl, findingData }: IProps) => {
+  console.log('🚀 ~ file: Thumbnail.tsx ~ line 12 ~ Thumbnail ~ findingData', JSON.stringify(findingData));
   return (
     <Box border="1px solid black" p={4} position="relative">
       <Link href={routes.DETAIL}>
