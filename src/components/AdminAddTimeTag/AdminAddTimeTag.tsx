@@ -62,10 +62,7 @@ const AdminAddTimeTag = ({ getTimeTags }: AdminAddTimeTagProps) => {
     return (document.getElementById('form') as HTMLFormElement).reset();
   };
 
-  console.log('🚀 ~ file: AdminAddTimeTag.tsx ~ line 63 ~ AdminAddTimeTag ~ years', Years);
-
   const yearsOptions = Object.keys(Years).map((year) => {
-    console.log('🚀 ~ file: AdminAddTimeTag.tsx ~ line 74 ~ yearsOptions ~ year', year);
     return (
       <option key={year} value={year}>
         {`${year}_${Years[`${year}`]}let`}

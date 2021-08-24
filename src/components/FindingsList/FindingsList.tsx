@@ -17,7 +17,6 @@ const FindingsList = () => {
     if (res) {
       setFindings(res?.data?.data);
     }
-    console.log('finding > ', JSON.stringify(res?.data?.data));
   };
 
   useEffect(() => {
@@ -28,8 +27,16 @@ const FindingsList = () => {
     <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>
       {findings.length &&
         findings.map((finding: any) => {
-          const { data, ref } = finding;
-          return <Thumbnail key={ref['@ref'].id} findingData={data} imageUrl={drivko} />;
+          const { findingDoc, basicTag, timeTag } = finding;
+          return (
+            <Thumbnail
+              key={findingDoc.ref['@ref'].id}
+              findingData={findingDoc.data}
+              basicTag={basicTag.data}
+              timeTag={timeTag.data}
+              imageUrl={drivko}
+            />
+          );
         })}
     </SimpleGrid>
   );

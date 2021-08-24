@@ -31,7 +31,6 @@ const AdminAddForm = ({ hideForm }: AdminAddFormProps) => {
   };
 
   const { name, basicTagId, timeTagId } = formData;
-  console.log('🚀 ~ file: AdminAddForm.tsx ~ line 24 ~ AdminAddForm ~ basicTagId', formData);
 
   const getTags = async () => {
     const res = await axios.get<any>(TAGS, { headers: headers }).catch((e) => console.log(JSON.stringify(e)));

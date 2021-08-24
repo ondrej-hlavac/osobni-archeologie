@@ -6,10 +6,11 @@ import Tag from '../Tag';
 interface IProps {
   imageUrl: string;
   findingData: any;
+  basicTag: any;
+  timeTag: any;
 }
 
-const Thumbnail = ({ imageUrl, findingData }: IProps) => {
-  console.log('🚀 ~ file: Thumbnail.tsx ~ line 12 ~ Thumbnail ~ findingData', JSON.stringify(findingData));
+const Thumbnail = ({ imageUrl, basicTag, timeTag }: IProps) => {
   return (
     <Box border="1px solid black" p={4} position="relative">
       <Link href={routes.DETAIL}>
@@ -18,9 +19,8 @@ const Thumbnail = ({ imageUrl, findingData }: IProps) => {
         </Center>
       </Link>
       <Flex padding={2} position="absolute" bottom="0" left="0" right="0" backgroundColor="#ffffff83" zIndex={99}>
-        <Tag color="teal" link path={routes.HOME} label="tag1" />
-        <Tag color="pink" link path={routes.HOME} label="tag2" />
-        <Tag color="purple" link path={routes.HOME} label="tag3" />
+        <Tag color={`#${basicTag.color}`} label={basicTag.name} />
+        <Tag color={`#${timeTag.color}`} label={timeTag.name} />
       </Flex>
     </Box>
   );
