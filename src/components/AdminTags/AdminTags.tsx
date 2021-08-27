@@ -15,7 +15,6 @@ const AdminTags = () => {
     if (res) {
       setTags(res.data);
     }
-    console.log(JSON.stringify(res));
   };
 
   const getTimeTags = async () => {
@@ -23,7 +22,6 @@ const AdminTags = () => {
     if (res) {
       setTimeTags(res.data);
     }
-    console.log(JSON.stringify(res));
   };
 
   useEffect(() => {

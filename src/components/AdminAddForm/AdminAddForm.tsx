@@ -4,6 +4,8 @@ import axios from 'axios';
 import { headers, TAGS, TIME_TAGS, FINDINGS } from '../../constants/api';
 import SelectedTag from './components/SelectedTag';
 import SelectTag from './components/SelectTag';
+import AddImage from './components/AddImageInput/components/AddImageDropZone';
+import AddImageInput from './components/AddImageInput';
 
 interface AdminAddFormProps {
   hideForm: () => void;
@@ -37,7 +39,6 @@ const AdminAddForm = ({ hideForm }: AdminAddFormProps) => {
     if (res) {
       setTags(res.data);
     }
-    console.log(JSON.stringify(res));
   };
 
   const getTimeTags = async () => {
@@ -45,7 +46,6 @@ const AdminAddForm = ({ hideForm }: AdminAddFormProps) => {
     if (res) {
       setTimeTags(res.data);
     }
-    console.log(JSON.stringify(res));
   };
 
   const handleSelectTag = (tagId: string) => {
@@ -78,10 +78,7 @@ const AdminAddForm = ({ hideForm }: AdminAddFormProps) => {
       <Divider my={8} />
 
       {/* ADD IMAGE */}
-      <Text>add thumbnail (png / jpg)</Text>
-      <Button m="auto" colorScheme="yellow">
-        +
-      </Button>
+      <AddImageInput />
       <Divider my={8} />
 
       {/* FINDING NAME */}
@@ -94,7 +91,6 @@ const AdminAddForm = ({ hideForm }: AdminAddFormProps) => {
             updateForm({ name: e.target.value });
           }}
           value={name}
-          defaultValue={''}
           required
         />
         <FormHelperText>Na webu není vidět, ale lze podle něj filtrovat.</FormHelperText>
