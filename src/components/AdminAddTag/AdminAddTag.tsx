@@ -16,11 +16,9 @@ const AdminAddTag = ({ getTags }: AdminAddTagProps) => {
     const label = labelRef?.current?.value;
     const color = colorRef?.current?.value;
 
-    console.log('🚀 ~ file: AdminAddTag.tsx ~ line 12 ~ handleSubmit ~ color', label, color);
     const res = await axios.post(TAGS, { name: label, color }, { headers: headers }).catch((e) => console.log(JSON.stringify(e)));
 
-    console.log('res ', JSON.stringify(res));
-
+    console.log('create tag data: ', res);
     resetForm();
     getTags();
   };
@@ -34,12 +32,12 @@ const AdminAddTag = ({ getTags }: AdminAddTagProps) => {
       <Heading as="h5" mb={4} textDecoration="none">
         Basic TAG
       </Heading>
-      <form onSubmit={handleSubmit} id="form">
+      <form onSubmit={handleSubmit} id="form-basic-tag">
         <FormControl id="label" isRequired mb={4}>
           <FormLabel>label</FormLabel>
           <Input ref={labelRef} placeholder="od starýho" />
         </FormControl>
-        <FormControl id="color" isRequired mb={4}>
+        <FormControl id="color-basic-tag" isRequired mb={4}>
           <FormLabel>Barva (hex)</FormLabel>
           <Input ref={colorRef} placeholder="4287f5" />
         </FormControl>

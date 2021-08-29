@@ -7,7 +7,6 @@ interface AddImageProps {
 const AddImageDropZone = ({ onFileSelected }: AddImageProps) => {
   const onDropFile = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    console.log('droppp');
 
     const items = e.dataTransfer.items;
     console.log('🚀 ~ file: AddImageDropZone.tsx ~ line 13 ~ onDropFile ~ items', items);
