@@ -16,5 +16,5 @@ export const headers = {
 
 export const imageHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Content-Type': 'image/jpeg',
+  'Content-Type': 'multipart/form-data; image/jpeg',
 };
