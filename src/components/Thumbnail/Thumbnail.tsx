@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image, Link, Flex, Center } from '@chakra-ui/react';
+import { Box, Image, Link, Flex } from '@chakra-ui/react';
 import { routes } from '../../constants/routes';
 import Tag from '../Tag';
 

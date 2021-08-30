@@ -27,7 +27,7 @@ const Tag = ({ link, color, label, path, onClick }: TagProps) => {
       borderRadius={0}
       p={5}
       onClick={onClick}
-      _hover={{ backgroundColor: 'brown' }}
+      _hover={{ backgroundColor: '#a8a8a8', color: '#353535' }}
     >
       #{label}
     </Button>
