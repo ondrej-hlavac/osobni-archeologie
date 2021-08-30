@@ -12,11 +12,9 @@ interface IProps {
 
 const Thumbnail = ({ imageUrl, basicTag, timeTag }: IProps) => {
   return (
-    <Box border="1px solid black" p={4} position="relative">
-      <Link href={routes.DETAIL}>
-        <Center>
-          <Image src={imageUrl} alt="placeholder" mb={4} />
-        </Center>
+    <Box border="1px solid rgba(0,0,0,0.4)" p={0} position="relative">
+      <Link href={routes.DETAIL} position="relative" _after={{ display: 'block', width: '100%', padding: '0', paddingTop: '100%' }}>
+        <Image src={imageUrl} objectFit="contain" objectPosition="50% 50%" alt="placeholder" m="auto" />
       </Link>
       <Flex padding={2} position="absolute" bottom="0" left="0" right="0" backgroundColor="#ffffff83" zIndex={99}>
         <Tag color={`#${basicTag.color}`} label={basicTag.name} />
