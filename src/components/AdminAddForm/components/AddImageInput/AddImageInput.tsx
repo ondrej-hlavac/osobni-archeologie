@@ -85,10 +85,10 @@ const AddImageInput = ({ updateForm }: AddImageInputProps) => {
       // console.log('response after upload file', res);
       const { data } = await res;
       console.log('🚀 ~ file: AddImageInput.tsx ~ line 77 ~ onFileSelected ~ responseBody', data.publicUrl);
-      setUploadState(UploadStatus.DISPLAYING_THUMBNAIL);
 
       // initStream(responseBody.documentId);
       setThumbnailUrl(data.publicUrl);
+      setUploadState(UploadStatus.DISPLAYING_THUMBNAIL);
       updateForm({ image_url: data.publicUrl });
     }
   };
@@ -98,7 +98,7 @@ const AddImageInput = ({ updateForm }: AddImageInputProps) => {
       {uploadState === UploadStatus.WAITING_FOR_FILE && <AddImageDropZone onFileSelected={onFileSelected} />}
       {uploadState === UploadStatus.UPLOADING_FILE && <>uploading file</>}
       {uploadState === UploadStatus.WAITING_FOR_THUMBNAIL && <>WAITING_FOR_THUMBNAIL</>}
-      {uploadState === UploadStatus.DISPLAYING_THUMBNAIL && (
+      {uploadState === UploadStatus.DISPLAYING_THUMBNAIL && thumbnailUrl?.length && (
         <>{thumbnailUrl && <Image src={thumbnailUrl} alt="finding image" maxWidth="500px" />}</>
       )}
     </>
