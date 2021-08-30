@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Link } from '@chakra-ui/react';
 
 interface TagProps {
-  link?: string | boolean;
+  link?: string | undefined;
   path?: string;
   label?: string;
   color: string;
@@ -10,7 +10,7 @@ interface TagProps {
 }
 
 const Tag = ({ link, color, label, path, onClick }: TagProps) => {
-  if (link) {
+  if (link?.length || path?.length) {
     return (
       <Link
         backgroundColor={color}
@@ -19,7 +19,7 @@ const Tag = ({ link, color, label, path, onClick }: TagProps) => {
         size="xs"
         fontSize="12px"
         fontWeight="semibold"
-        href={path}
+        href={link}
         m={1}
         borderRadius={0}
         fontFamily="Source Code Pro"
@@ -30,7 +30,7 @@ const Tag = ({ link, color, label, path, onClick }: TagProps) => {
         lineHeight="40px"
         _hover={{ backgroundColor: '#a8a8a8', color: '#353535', textDecoration: 'none' }}
       >
-        #{label}
+        #{label}a
       </Link>
     );
   }

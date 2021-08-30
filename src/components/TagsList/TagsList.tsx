@@ -6,6 +6,7 @@ import { routes } from '../../constants/routes';
 
 const TagsList = ({ tags, headline, link = false }: any) => {
   if (!tags) {
+    console.log('return null');
     return null;
   }
 
@@ -21,7 +22,7 @@ const TagsList = ({ tags, headline, link = false }: any) => {
           return (
             <Tag
               color={`#${tag.data.color}`}
-              link={link ? routes.DETAIL : undefined}
+              link={link ? `${routes.HOME}?tag=${tag?.ref?.['@ref']?.id}` : undefined}
               key={`key_${tag.data.name}${index}`}
               label={tag.data.name}
             />

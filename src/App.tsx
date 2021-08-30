@@ -27,14 +27,14 @@ function App() {
         </Flex>
 
         <Switch>
-          <Route exact path={routes.HOME}>
-            <Homepage />
-          </Route>
           <Route path={routes.DETAIL}>
             <DetailPage />
           </Route>
           <Route path={routes.ADMIN}>
             <Administration />
+          </Route>
+          <Route path={routes.HOME}>
+            <Homepage />
           </Route>
         </Switch>
       </Router>
