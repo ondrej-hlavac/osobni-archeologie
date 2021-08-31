@@ -5,6 +5,7 @@ export const baseApiUrl =
     : 'https://api-osobniarcheologie.netlify.app/.netlify/functions/server';
 
 export const FINDINGS = `${baseApiUrl}/findings`;
+export const FINDING = `${baseApiUrl}/finding`;
 export const TAGS = `${baseApiUrl}/tags`;
 export const TIME_TAGS = `${baseApiUrl}/time-tags`;
 export const FINDING_IMAGE = `${baseApiUrl}/finding-image`;

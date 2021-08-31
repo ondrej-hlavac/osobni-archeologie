@@ -10,11 +10,14 @@ interface IProps {
   timeTag: any;
 }
 
-const Thumbnail = ({ imageUrl, basicTag, timeTag }: IProps) => {
+const Thumbnail = ({ imageUrl, basicTag, timeTag, findingData }: IProps) => {
+  // const { data } = findingData;
+  // console.log('🚀 ~ file: Thumbnail.tsx ~ line 15 ~ Thumbnail ~ data', data);
+
   return (
     <Box border="1px solid rgba(0,0,0,0.4)" p={0} position="relative">
       <Link
-        href={routes.DETAIL}
+        href={`${routes.DETAIL}/${findingData.ref?.['@ref'].id}`}
         position="relative"
         display="block"
         m={0}

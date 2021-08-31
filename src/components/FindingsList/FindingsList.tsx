@@ -31,7 +31,7 @@ const FindingsList = () => {
           return (
             <Thumbnail
               key={findingDoc.ref['@ref'].id}
-              findingData={findingDoc.data}
+              findingData={findingDoc}
               basicTag={basicTag.data}
               timeTag={timeTag.data}
               imageUrl={findingDoc.data.image_url || drivko}

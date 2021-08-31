@@ -27,7 +27,7 @@ function App() {
         </Flex>
 
         <Switch>
-          <Route path={routes.DETAIL}>
+          <Route path={`${routes.DETAIL}/:id`}>
             <DetailPage />
           </Route>
           <Route path={routes.ADMIN}>
