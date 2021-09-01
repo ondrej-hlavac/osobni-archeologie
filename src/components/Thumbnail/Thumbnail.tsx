@@ -15,7 +15,6 @@ const Thumbnail = ({ imageUrl, basicTag, timeTag, findingData }: IProps) => {
 
   return (
     <Box border="1px solid rgba(0,0,0,0.4)" p={0} position="relative">
-      {console.log('🚀 ~ file: Thumbnail.tsx ~ line 30 ~ Thumbnail ~ basicTag', basicTag)}
       <Link
         href={`${routes.DETAIL}/${findingData.ref?.['@ref'].id}`}
         position="relative"

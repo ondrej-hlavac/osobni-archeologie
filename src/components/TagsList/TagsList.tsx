@@ -5,7 +5,7 @@ import { routes } from '../../constants/routes';
 // import { routes } from '../../constants/routes';
 
 const TagsList = ({ tags, headline, link = false }: any) => {
-  if (!tags) {
+  if (!tags || !tags?.data?.length) {
     return null;
   }
 
