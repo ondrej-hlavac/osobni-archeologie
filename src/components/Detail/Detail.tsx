@@ -7,7 +7,6 @@ import { FINDING, headers } from '../../constants/api';
 
 const Detail = () => {
   const [finding, setFinding] = useState<{ image_url: string; '@ref': unknown }>();
-  console.log('🚀 ~ file: Detail.tsx ~ line 10 ~ Detail ~ finding', finding);
 
   let { id } = useParams<{ id: string }>();
 
