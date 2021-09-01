@@ -50,7 +50,6 @@ const TagsMenu = () => {
     const filteredTag: TagProps[] = allTags.filter((tag: any) => {
       return tag?.ref?.['@ref'].id === filterQuery;
     });
-    console.log('🚀 ~ file: TagsMenu.tsx ~ line 46 ~ filteredTag ~ filteredTag', filteredTag);
 
     return (
       <Flex>
