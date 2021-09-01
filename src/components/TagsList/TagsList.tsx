@@ -9,6 +9,10 @@ const TagsList = ({ tags, headline, link = false }: any) => {
     return null;
   }
 
+  const sortedTags = tags.data.sort((tagA: any, tagB: any) => {
+    return tagA.data.year - tagB.data.year;
+  });
+
   return (
     <>
       {headline && (
@@ -17,7 +21,7 @@ const TagsList = ({ tags, headline, link = false }: any) => {
         </Heading>
       )}
       <Flex flexWrap="wrap" my={8} alignItems="flex-start" width="100%" textAlign="left">
-        {tags.data?.map((tag: any, index: number) => {
+        {sortedTags?.map((tag: any, index: number) => {
           return (
             <Tag
               color={`#${tag.data.color}`}
