@@ -8,9 +8,13 @@ import drivko from '../../assets/images/placeholders/drivko.png';
 // import naramek from '../../assets/images/placeholders/naramek.png';
 // import whiskey from '../../assets/images/placeholders/drivko.png';
 import { FINDINGS, headers } from '../../constants/api';
+import { useQuery } from '../../utils/useQuery';
 
 const FindingsList = () => {
   const [findings, setFindings] = useState([] as any[]);
+
+  let query = useQuery();
+  const filterQuery = query.get('tag');
 
   const getFindings = async () => {
     const res = await axios.get<any>(FINDINGS, { headers: headers }).catch((e) => console.log(JSON.stringify(e)));
@@ -23,11 +27,35 @@ const FindingsList = () => {
     getFindings();
   }, []);
 
+  if (filterQuery?.length) {
+    return (
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>
+        {findings.length &&
+          findings.map((finding: any) => {
+            const { findingDoc, basicTag, timeTag } = finding;
+
+            if (findingDoc.data.basicTagId !== filterQuery && findingDoc.data.timeTagId !== filterQuery) return;
+
+            return (
+              <Thumbnail
+                key={findingDoc.ref['@ref'].id}
+                findingData={findingDoc}
+                basicTag={basicTag.data}
+                timeTag={timeTag.data}
+                imageUrl={findingDoc.data.image_url || drivko}
+              />
+            );
+          })}
+      </SimpleGrid>
+    );
+  }
+
   return (
     <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0}>
       {findings.length &&
         findings.map((finding: any) => {
           const { findingDoc, basicTag, timeTag } = finding;
+
           return (
             <Thumbnail
               key={findingDoc.ref['@ref'].id}

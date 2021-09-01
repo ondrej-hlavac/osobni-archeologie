@@ -8,6 +8,7 @@ import './App.css';
 import { customTheme } from './style/theme';
 import Fonts from './style/Fonts';
 import Administration from './pages/Administration';
+import TestPage from './pages/TestPage';
 
 // import logo from './logo.svg';
 /* <img src={logo} className="App-logo" alt="logo" /> */
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path={routes.ADMIN}>
             <Administration />
+          </Route>
+          <Route path={routes.TEST}>
+            <TestPage />
           </Route>
           <Route path={routes.HOME}>
             <Homepage />

@@ -7,6 +7,7 @@ import { FINDING, headers } from '../../constants/api';
 
 const Detail = () => {
   const [finding, setFinding] = useState<{ image_url: string; '@ref': unknown }>();
+  console.log('🚀 ~ file: Detail.tsx ~ line 10 ~ Detail ~ finding', finding);
 
   let { id } = useParams<{ id: string }>();
 
@@ -24,7 +25,11 @@ const Detail = () => {
   return (
     <Box>
       <Center>
-        <Image src={finding?.image_url} alt="placeholder" objectFit="cover" />
+        {finding?.image_url !== undefined ? (
+          <Image src={finding?.image_url} alt="placeholder" objectFit="cover" />
+        ) : (
+          <Box width="100%" height="500px" />
+        )}
       </Center>
       <TagsList />
     </Box>

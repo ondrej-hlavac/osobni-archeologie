@@ -4,7 +4,7 @@ import { Button, Link } from '@chakra-ui/react';
 interface TagProps {
   link?: string | undefined;
   path?: string;
-  label?: string;
+  label: string;
   color: string;
   onClick?: () => void;
 }
@@ -30,7 +30,7 @@ const Tag = ({ link, color, label, path, onClick }: TagProps) => {
         lineHeight="40px"
         _hover={{ backgroundColor: '#a8a8a8', color: '#353535', textDecoration: 'none' }}
       >
-        #{label}a
+        #{label}
       </Link>
     );
   }
