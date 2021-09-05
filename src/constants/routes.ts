@@ -3,4 +3,6 @@ export const routes = {
   DETAIL: '/detail',
   ADMIN: '/admin',
   TEST: '/test',
+  PROJECTOR_ONE: '/projector-one',
+  PROJECTOR_TWO: '/projector-two',
 };
