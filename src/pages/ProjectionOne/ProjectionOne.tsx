@@ -1,6 +1,25 @@
-import React, { createRef, useCallback, useState } from 'react';
+import React, { createRef, Suspense, useCallback, useState } from 'react';
 import { chakra } from '@chakra-ui/system';
 import { MyCanvas } from '../../components/MyCanvas';
+
+const FindingData = [
+  {
+    objUrl: 'models/center/ngfx.obj',
+    mtlUrl: 'models/center/ngfx.obj',
+  },
+  {
+    objUrl: 'models/pfanner_orange/model.obj',
+    mtlUrl: 'models/pfanner_orange/model.mtl',
+  },
+  {
+    objUrl: 'models/nokia_cerna/model.obj',
+    mtlUrl: 'models/nokia_cerna/model.mtl',
+  },
+  {
+    objUrl: 'models/denicek/model.obj',
+    mtlUrl: 'models/denicek/model.mtl',
+  },
+];
 
 export const ProjectionOne = () => {
   // const frameRef = createRef<HTMLDivElement>();
@@ -36,11 +55,19 @@ export const ProjectionOne = () => {
 
   return (
     <chakra.div ref={frameRef} position="relative" width="100vw" height="100vh" backgroundColor="black">
-      <MyCanvas width={canvasSize} height={canvasSize} position={randomStartPosition()} frameDimensions={frameDimensions} />
-      <MyCanvas width={canvasSize} height={canvasSize} position={randomStartPosition()} frameDimensions={frameDimensions} />
-      <MyCanvas width={canvasSize} height={canvasSize} position={randomStartPosition()} frameDimensions={frameDimensions} />
-      <MyCanvas width={canvasSize} height={canvasSize} position={randomStartPosition()} frameDimensions={frameDimensions} />
-      <MyCanvas width={canvasSize} height={canvasSize} position={randomStartPosition()} frameDimensions={frameDimensions} />
+      {FindingData.map((finding: any) => {
+        return (
+          <MyCanvas
+            key={finding.mtlUrl}
+            width={canvasSize}
+            height={canvasSize}
+            position={randomStartPosition()}
+            frameDimensions={frameDimensions}
+            mtlUrl={finding.mtlUrl}
+            objUrl={finding.objUrl}
+          />
+        );
+      })}
     </chakra.div>
   );
 };

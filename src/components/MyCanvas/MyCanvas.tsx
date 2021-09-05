@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import * as THREE from 'three';
-import { chakra, Image } from '@chakra-ui/react';
-import { Canvas, useFrame } from '@react-three/fiber';
+// import { chakra, Image } from '@chakra-ui/react';
+import { Canvas } from '@react-three/fiber';
 
 // import imageUrl from '../../assets/images/placeholders/naramek.png';
 
@@ -15,6 +15,8 @@ interface CanvasProps {
   height: number;
   position: { x: number; y: number };
   frameDimensions?: DOMRect;
+  mtlUrl: string;
+  objUrl: string;
 }
 
 interface AnimationProps {
@@ -36,17 +38,16 @@ const Spinner: React.FC = () => {
   return <span>spinner</span>;
 };
 
-export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, frameDimensions }: CanvasProps) => {
-  const modelObj = 'models/center/ngfx.obj';
-  const modelMtl = 'models/center/ngfx.mtl';
+export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, frameDimensions, mtlUrl, objUrl }: CanvasProps) => {
+  // const modelObj = 'models/center/ngfx.obj';
+  // const modelMtl = 'models/center/ngfx.mtl';
   const [left, setLeft] = useState(position.x);
   const [top, setTop] = useState(position.y);
-  const [directionX, setDirectionX] = useState(DirectionX.Right);
-  const [directionY, setDirectionY] = useState(DirectionY.Top);
-  // console.log('🚀 ~ file: MyCanvas.tsx ~ line 41 ~ MyCanvas ~ directionX', directionX);
-  // console.log('🚀 ~ file: MyCanvas.tsx ~ line 39 ~ randXdir', randXdir());
+  const randomDirectionX = Math.random() > 0.5 ? DirectionX.Right : DirectionX.Left;
+  const randomDirectionY = Math.random() > 0.5 ? DirectionY.Top : DirectionY.Bottom;
+  const [directionX, setDirectionX] = useState(randomDirectionX);
+  const [directionY, setDirectionY] = useState(randomDirectionY);
   const [rotation, setRotation] = useState(0);
-  console.log('🚀 ~ file: MyCanvas.tsx ~ line 49 ~ MyCanvas ~ rotation', rotation);
 
   useEffect(() => {
     if (position) {
@@ -58,7 +59,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
   useEffect(() => {
     const timer = setTimeout(() => {
       handleAnimation();
-    }, 333);
+    }, 30);
     return () => {
       clearTimeout(timer);
       handleAnimation();
@@ -114,7 +115,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
       setTop(top - 2);
     }
 
-    if (directionY === DirectionY.Top && top === 0) {
+    if (directionY === DirectionY.Top && top <= 0) {
       setTop(top + 2);
       setDirectionY(DirectionY.Bottom);
     }
@@ -137,7 +138,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
         top,
         width: `${canvasWidth}`,
         height: `${canvasHeight}`,
-        backgroundColor: '#0e8a5a7f',
+        // backgroundColor: '#0e8a5a7f',
         overflow: 'hidden',
       }}
     >
@@ -145,7 +146,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
         <Canvas camera={{ fov: 75, position: [0, 30, 90], zoom: 10 }} style={{ height: `${canvasHeight}px`, width: `${canvasWidth}px` }}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <ProjectionModel rotationX={rotation / 100} rotationY={rotation / 100} modelObjUrl={modelObj} modelMtlUrl={modelMtl} />
+          <ProjectionModel rotationX={rotation / 100} rotationY={rotation / 100} modelObjUrl={objUrl} modelMtlUrl={mtlUrl} />
         </Canvas>
       </Suspense>
     </div>
