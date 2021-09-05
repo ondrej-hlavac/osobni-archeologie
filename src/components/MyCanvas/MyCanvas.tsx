@@ -37,8 +37,8 @@ const Spinner: React.FC = () => {
 };
 
 export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, frameDimensions }: CanvasProps) => {
-  const modelObj = 'models/pfanner_orange/model.obj';
-  const modelMtl = 'models/pfanner_orange/model.mtl';
+  const modelObj = 'models/center/ngfx.obj';
+  const modelMtl = 'models/center/ngfx.mtl';
   const [left, setLeft] = useState(position.x);
   const [top, setTop] = useState(position.y);
   const [directionX, setDirectionX] = useState(DirectionX.Right);
@@ -58,17 +58,25 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
   useEffect(() => {
     const timer = setTimeout(() => {
       handleAnimation();
-      rotateModel();
     }, 333);
     return () => {
       clearTimeout(timer);
       handleAnimation();
-      rotateModel();
     };
   }, [left]);
 
+  useEffect(() => {
+    const timerRotation = setTimeout(() => {
+      rotateModel();
+    }, 10);
+    return () => {
+      clearTimeout(timerRotation);
+      rotateModel();
+    };
+  }, [rotation]);
+
   const rotateModel = () => {
-    if (rotation <= 359) {
+    if (rotation <= 3599) {
       setRotation(rotation + 1);
     } else {
       setRotation(0);
@@ -103,20 +111,20 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
 
     // VERTICAL MOVEMENT
     if (directionY === DirectionY.Top && top > 0) {
-      setTop(top - 1);
+      setTop(top - 2);
     }
 
     if (directionY === DirectionY.Top && top === 0) {
-      setTop(top + 1);
+      setTop(top + 2);
       setDirectionY(DirectionY.Bottom);
     }
 
     if (directionY === DirectionY.Bottom && top + canvasHeight < frameDimensions.height) {
-      setTop(top + 1);
+      setTop(top + 2);
     }
 
-    if (directionY === DirectionY.Bottom && top + canvasHeight === frameDimensions.height) {
-      setTop(top - 1);
+    if (directionY === DirectionY.Bottom && top + canvasHeight >= frameDimensions.height) {
+      setTop(top - 2);
       setDirectionY(DirectionY.Top);
     }
   };
@@ -134,10 +142,10 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
       }}
     >
       <Suspense fallback={<Spinner />}>
-        <Canvas camera={{ fov: 75, position: [0, 0, 140], zoom: 44 }} style={{ height: `${canvasHeight}px`, width: `${canvasWidth}px` }}>
+        <Canvas camera={{ fov: 75, position: [0, 30, 90], zoom: 10 }} style={{ height: `${canvasHeight}px`, width: `${canvasWidth}px` }}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <ProjectionModel rotationX={rotation} rotationY={rotation} modelObjUrl={modelObj} modelMtlUrl={modelMtl} />
+          <ProjectionModel rotationX={rotation / 100} rotationY={rotation / 100} modelObjUrl={modelObj} modelMtlUrl={modelMtl} />
         </Canvas>
       </Suspense>
     </div>
