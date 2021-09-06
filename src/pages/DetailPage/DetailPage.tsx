@@ -5,7 +5,7 @@ import List from '../../components/FindingsList';
 
 const DetailPage = () => {
   return (
-    <Container py={6} maxW="990px">
+    <Container py={6} maxW="1110px">
       <div>
         <Detail />
         <Divider my={6} />

@@ -37,11 +37,13 @@ export const Detail = () => {
   // const mtlUrl = '../../assets/models/denicek/model.mtl';
   // const objUrl = '../../assets/models/denicek/model.obj';
 
+  console.log('finding?.image_url.replace', finding?.image_url.replace('_thumbnail', ''));
+
   return (
     <Box>
       <Center>
         {finding?.image_url !== undefined ? (
-          <Image src={finding?.image_url} alt="placeholder" objectFit="cover" />
+          <Image src={finding?.image_url.replace('_thumbnails', '')} alt="placeholder" objectFit="cover" />
         ) : (
           <Box width="100%" height="500px" />
         )}
