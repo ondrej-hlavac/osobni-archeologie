@@ -1,11 +1,11 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Center, Image } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FINDING, headers } from '../../constants/api';
-import * as THREE from 'three';
-import { Canvas } from '@react-three/fiber';
-import { Model } from '../Model';
+// import * as THREE from 'three';
+// import { Canvas } from '@react-three/fiber';
+// import { Model } from '../Model';
 
 const Spinner: React.FC = () => {
   return <span>spinner</span>;
