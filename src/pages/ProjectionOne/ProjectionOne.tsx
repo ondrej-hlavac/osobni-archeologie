@@ -5,7 +5,7 @@ import { MyCanvas } from '../../components/MyCanvas';
 const FindingData = [
   {
     objUrl: 'models/center/ngfx.obj',
-    mtlUrl: 'models/center/ngfx.obj',
+    mtlUrl: 'models/center/ngfx.mtl',
   },
   {
     objUrl: 'models/pfanner_orange/model.obj',
