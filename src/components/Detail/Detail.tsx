@@ -34,7 +34,6 @@ export const Detail = () => {
   useEffect(() => {
     getFinding();
   }, [id]);
-
   // const mtlUrl = '../../assets/models/denicek/model.mtl';
   // const objUrl = '../../assets/models/denicek/model.obj';
 
