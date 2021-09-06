@@ -38,28 +38,28 @@ export const Detail = () => {
   // const mtlUrl = '../../assets/models/denicek/model.mtl';
   // const objUrl = '../../assets/models/denicek/model.obj';
 
-  // return (
-  //   <Box>
-  //     <Center>
-  //       {finding?.image_url !== undefined ? (
-  //         <Image src={finding?.image_url} alt="placeholder" objectFit="cover" />
-  //       ) : (
-  //         <Box width="100%" height="500px" />
-  //       )}
-  //     </Center>
-  //     {/* <TagsList /> */}
-  //   </Box>
-  // );
-
   return (
-    <div style={{ height: 600 }} onMouseMove={handleOnMouseMove}>
-      <Suspense fallback={<Spinner />}>
-        <Canvas camera={{ fov: 75, position: [-30, -30, -20], zoom: 10 }} style={{ height: '600px' }}>
-          <ambientLight />
-          <pointLight position={[10, 10, 10]} />
-          <Model rotationX={rotateX} rotationY={rotateY} modelMtl="models/denicek/model.mtl" modelObj="models/denicek/model.mtl" />
-        </Canvas>
-      </Suspense>
-    </div>
+    <Box>
+      <Center>
+        {finding?.image_url !== undefined ? (
+          <Image src={finding?.image_url} alt="placeholder" objectFit="cover" />
+        ) : (
+          <Box width="100%" height="500px" />
+        )}
+      </Center>
+      {/* <TagsList /> */}
+    </Box>
   );
+
+  // return (
+  //   <div style={{ height: 600 }} onMouseMove={handleOnMouseMove}>
+  //     <Suspense fallback={<Spinner />}>
+  //       <Canvas camera={{ fov: 75, position: [-30, -30, -20], zoom: 10 }} style={{ height: '600px' }}>
+  //         <ambientLight />
+  //         <pointLight position={[10, 10, 10]} />
+  //         <Model rotationX={rotateX} rotationY={rotateY} modelMtl="models/denicek/model.mtl" modelObj="models/denicek/model.mtl" />
+  //       </Canvas>
+  //     </Suspense>
+  //   </div>
+  // );
 };

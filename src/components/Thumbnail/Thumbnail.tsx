@@ -24,7 +24,7 @@ const Thumbnail = ({ imageUrl, basicTag, timeTag, findingData }: IProps) => {
       >
         <Image position="absolute" width="100%" src={imageUrl} objectFit="contain" objectPosition="50% 50%" alt="placeholder" m="auto" />
       </Link>
-      <Flex padding={2} position="absolute" bottom="0" left="0" right="0" backgroundColor="#ffffff83" zIndex={99}>
+      <Flex padding={2} bottom="0" left="0" right="0" backgroundColor="#ffffff83" zIndex={99}>
         <Tag color={`#${basicTag.color}`} label={basicTag.name} link={`${routes.HOME}?tag=${data.basicTagId}`} />
         <Tag color={`#${timeTag.color}`} label={timeTag.name} link={`${routes.HOME}?tag=${data.timeTagId}`} />
       </Flex>

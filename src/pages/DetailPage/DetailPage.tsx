@@ -5,13 +5,13 @@ import List from '../../components/FindingsList';
 
 const DetailPage = () => {
   return (
-    // <Container py={6} maxW="990px">
-    <div>
-      <Detail />
-      <Divider my={6} />
-    </div>
-    // {/* <List /> */}
-    // </Container>
+    <Container py={6} maxW="990px">
+      <div>
+        <Detail />
+        <Divider my={6} />
+      </div>
+      <List />
+    </Container>
   );
 };
 
