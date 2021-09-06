@@ -3,6 +3,7 @@ import { Box, Center, Image } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FINDING, headers } from '../../constants/api';
+import TagsList from '../TagsList';
 // import * as THREE from 'three';
 // import { Canvas } from '@react-three/fiber';
 // import { Model } from '../Model';
@@ -13,20 +14,12 @@ const Spinner: React.FC = () => {
 
 export const Detail = () => {
   const [finding, setFinding] = useState<{ image_url: string; '@ref': unknown }>();
-  const [mouseCoor, setMouseCoor] = useState<{ x: number; y: number }>();
-
-  const handleOnMouseMove = (e: any) => {
-    setMouseCoor({ x: e.screenX, y: e.screenY });
-  };
-
-  let rotateX = mouseCoor?.x ? mouseCoor.x : 10;
-  let rotateY = mouseCoor?.y ? mouseCoor.y : 10;
-
   let { id } = useParams<{ id: string }>();
 
   const getFinding = async () => {
     const res = await axios.get<any>(`${FINDING}/${id}`, { headers: headers }).catch((e) => console.log(JSON.stringify(e)));
     if (res) {
+      console.log('res?.data', res?.data);
       setFinding(res?.data?.data);
     }
   };
@@ -34,10 +27,6 @@ export const Detail = () => {
   useEffect(() => {
     getFinding();
   }, [id]);
-  // const mtlUrl = '../../assets/models/denicek/model.mtl';
-  // const objUrl = '../../assets/models/denicek/model.obj';
-
-  console.log('finding?.image_url.replace', finding?.image_url.replace('_thumbnail', ''));
 
   return (
     <Box>
@@ -48,7 +37,7 @@ export const Detail = () => {
           <Box width="100%" height="500px" />
         )}
       </Center>
-      {/* <TagsList /> */}
+      <TagsList />
     </Box>
   );
 

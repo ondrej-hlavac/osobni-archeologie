@@ -4,28 +4,44 @@ import { MyCanvas } from '../../components/MyCanvas';
 
 const FindingData = [
   {
-    objUrl: 'models/7_modelu/7_modelu/1/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/1/model.mtl',
+    objUrl: 'models/ultraCenter1/model.obj',
+    mtlUrl: 'models/ultraCenter1/model.mtl',
   },
   {
-    objUrl: 'models/7_modelu/7_modelu/2/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/2/model.mtl',
+    objUrl: 'models/ultraCenter2/model.obj',
+    mtlUrl: 'models/ultraCenter2/model.mtl',
   },
   {
-    objUrl: 'models/7_modelu/7_modelu/3/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/3/model.mtl',
+    objUrl: 'models/ultraCenter3/model.obj',
+    mtlUrl: 'models/ultraCenter3/model.mtl',
   },
   {
-    objUrl: 'models/7_modelu/7_modelu/4/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/4/model.mtl',
+    objUrl: 'models/ultraCenter4/model.obj',
+    mtlUrl: 'models/ultraCenter4/model.mtl',
   },
   {
-    objUrl: 'models/7_modelu/7_modelu/5/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/5/model.mtl',
+    objUrl: 'models/ultraCenter5/model.obj',
+    mtlUrl: 'models/ultraCenter5/model.mtl',
   },
   {
-    objUrl: 'models/7_modelu/7_modelu/6/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/6/model.mtl',
+    objUrl: 'models/ultraCenter6/model.obj',
+    mtlUrl: 'models/ultraCenter6/model.mtl',
+  },
+  {
+    objUrl: 'models/ultraCenter7/model.obj',
+    mtlUrl: 'models/ultraCenter7/model.mtl',
+  },
+  {
+    objUrl: 'models/ultraCenter8/model.obj',
+    mtlUrl: 'models/ultraCenter8/model.mtl',
+  },
+  {
+    objUrl: 'models/ultraCenter9/model.obj',
+    mtlUrl: 'models/ultraCenter9/model.mtl',
+  },
+  {
+    objUrl: 'models/ultraCenter10/model.obj',
+    mtlUrl: 'models/ultraCenter10/model.mtl',
   },
 ];
 

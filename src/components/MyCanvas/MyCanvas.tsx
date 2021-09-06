@@ -137,7 +137,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
         top,
         width: `${canvasWidth}`,
         height: `${canvasHeight}`,
-        backgroundColor: '#0e8a5a7f',
+        // backgroundColor: '#0e8a5a7f',
         overflow: 'hidden',
       }}
     >
