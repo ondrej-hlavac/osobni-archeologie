@@ -7,14 +7,14 @@ const FindingData = [
     objUrl: 'models/7_modelu/7_modelu/1/model.obj',
     mtlUrl: 'models/7_modelu/7_modelu/1/model.mtl',
   },
-  {
-    objUrl: 'models/7_modelu/7_modelu/2/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/2/model.mtl',
-  },
-  {
-    objUrl: 'models/7_modelu/7_modelu/3/model.obj',
-    mtlUrl: 'models/7_modelu/7_modelu/3/model.mtl',
-  },
+  // {
+  //   objUrl: 'models/7_modelu/7_modelu/2/model.obj',
+  //   mtlUrl: 'models/7_modelu/7_modelu/2/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/7_modelu/7_modelu/center/model.obj',
+  //   mtlUrl: 'models/7_modelu/7_modelu/center/model.mtl',
+  // },
   // {
   //   objUrl: 'models/center/ngfx.obj',
   //   mtlUrl: 'models/center/ngfx.mtl',
