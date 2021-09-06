@@ -19,29 +19,61 @@ const FindingData = [
     objUrl: 'models/ultraCenter4/model.obj',
     mtlUrl: 'models/ultraCenter4/model.mtl',
   },
+  // {
+  //   objUrl: 'models/ultraCenter5/model.obj',
+  //   mtlUrl: 'models/ultraCenter5/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter6/model.obj',
+  //   mtlUrl: 'models/ultraCenter6/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter7/model.obj',
+  //   mtlUrl: 'models/ultraCenter7/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter8/model.obj',
+  //   mtlUrl: 'models/ultraCenter8/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter9/model.obj',
+  //   mtlUrl: 'models/ultraCenter9/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter10/model.obj',
+  //   mtlUrl: 'models/ultraCenter10/model.mtl',
+  // },
   {
-    objUrl: 'models/ultraCenter5/model.obj',
-    mtlUrl: 'models/ultraCenter5/model.mtl',
+    objUrl: 'models/ultraCenter11/model.obj',
+    mtlUrl: 'models/ultraCenter11/model.mtl',
   },
   {
-    objUrl: 'models/ultraCenter6/model.obj',
-    mtlUrl: 'models/ultraCenter6/model.mtl',
+    objUrl: 'models/ultraCenter12/model.obj',
+    mtlUrl: 'models/ultraCenter12/model.mtl',
   },
   {
-    objUrl: 'models/ultraCenter7/model.obj',
-    mtlUrl: 'models/ultraCenter7/model.mtl',
+    objUrl: 'models/ultraCenter13/model.obj',
+    mtlUrl: 'models/ultraCenter13/model.mtl',
   },
   {
-    objUrl: 'models/ultraCenter8/model.obj',
-    mtlUrl: 'models/ultraCenter8/model.mtl',
+    objUrl: 'models/ultraCenter14/model.obj',
+    mtlUrl: 'models/ultraCenter14/model.mtl',
   },
   {
-    objUrl: 'models/ultraCenter9/model.obj',
-    mtlUrl: 'models/ultraCenter9/model.mtl',
+    objUrl: 'models/ultraCenter15/model.obj',
+    mtlUrl: 'models/ultraCenter15/model.mtl',
   },
   {
-    objUrl: 'models/ultraCenter10/model.obj',
-    mtlUrl: 'models/ultraCenter10/model.mtl',
+    objUrl: 'models/ultraCenter16/model.obj',
+    mtlUrl: 'models/ultraCenter16/model.mtl',
+  },
+  // {
+  //   objUrl: 'models/ultraCenter17/model.obj',
+  //   mtlUrl: 'models/ultraCenter17/model.mtl',
+  // },
+  {
+    objUrl: 'models/ultraCenter18/model.obj',
+    mtlUrl: 'models/ultraCenter18/model.mtl',
   },
 ];
 
