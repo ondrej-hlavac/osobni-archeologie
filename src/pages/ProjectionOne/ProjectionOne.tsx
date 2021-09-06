@@ -7,30 +7,26 @@ const FindingData = [
     objUrl: 'models/7_modelu/7_modelu/1/model.obj',
     mtlUrl: 'models/7_modelu/7_modelu/1/model.mtl',
   },
-  // {
-  //   objUrl: 'models/7_modelu/7_modelu/2/model.obj',
-  //   mtlUrl: 'models/7_modelu/7_modelu/2/model.mtl',
-  // },
-  // {
-  //   objUrl: 'models/7_modelu/7_modelu/center/model.obj',
-  //   mtlUrl: 'models/7_modelu/7_modelu/center/model.mtl',
-  // },
-  // {
-  //   objUrl: 'models/center/ngfx.obj',
-  //   mtlUrl: 'models/center/ngfx.mtl',
-  // },
-  // {
-  //   objUrl: 'models/pfanner_orange/model.obj',
-  //   mtlUrl: 'models/pfanner_orange/model.mtl',
-  // },
-  // {
-  //   objUrl: 'models/nokia_cerna/model.obj',
-  //   mtlUrl: 'models/nokia_cerna/model.mtl',
-  // },
-  // {
-  //   objUrl: 'models/denicek/model.obj',
-  //   mtlUrl: 'models/denicek/model.mtl',
-  // },
+  {
+    objUrl: 'models/7_modelu/7_modelu/2/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/2/model.mtl',
+  },
+  {
+    objUrl: 'models/7_modelu/7_modelu/3/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/3/model.mtl',
+  },
+  {
+    objUrl: 'models/7_modelu/7_modelu/4/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/4/model.mtl',
+  },
+  {
+    objUrl: 'models/7_modelu/7_modelu/5/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/5/model.mtl',
+  },
+  {
+    objUrl: 'models/7_modelu/7_modelu/6/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/6/model.mtl',
+  },
 ];
 
 export const ProjectionOne = () => {
@@ -51,12 +47,12 @@ export const ProjectionOne = () => {
       const randomY = Math.random();
       const top = Math.floor(
         frameDimensions.height * randomY + canvasSize > frameDimensions.height
-          ? frameDimensions.height - canvasSize - 100
+          ? frameDimensions.height - canvasSize
           : frameDimensions?.height * randomY
       );
       const left = Math.floor(
         frameDimensions.width * randomX + canvasSize > frameDimensions.width
-          ? frameDimensions.width - canvasSize - 100
+          ? frameDimensions.width - canvasSize
           : frameDimensions?.width * randomX
       );
       return { x: left, y: top };

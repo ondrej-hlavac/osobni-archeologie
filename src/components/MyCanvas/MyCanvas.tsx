@@ -76,8 +76,8 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
   }, [rotation]);
 
   const rotateModel = () => {
-    if (rotation <= 35999) {
-      setRotation(rotation + 1);
+    if (rotation <= 360) {
+      setRotation(rotation + 0.001);
     } else {
       setRotation(0);
     }
@@ -137,7 +137,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
         top,
         width: `${canvasWidth}`,
         height: `${canvasHeight}`,
-        backgroundColor: '#0e8a5a7f',
+        // backgroundColor: '#0e8a5a7f',
         overflow: 'hidden',
       }}
     >
@@ -145,7 +145,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
         <Canvas camera={{ fov: 75, position: [0, 70, 110], zoom: 17 }} style={{ height: `${canvasHeight}px`, width: `${canvasWidth}px` }}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <ProjectionModel rotationX={rotation / 100} rotationY={rotation / 100} modelObjUrl={objUrl} modelMtlUrl={mtlUrl} />
+          <ProjectionModel rotationX={rotation} rotationY={rotation} modelObjUrl={objUrl} modelMtlUrl={mtlUrl} />
         </Canvas>
       </Suspense>
     </div>

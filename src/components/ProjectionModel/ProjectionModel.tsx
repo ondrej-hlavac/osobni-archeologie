@@ -17,5 +17,5 @@ export const ProjectionModel = ({ rotationX, rotationY, modelMtlUrl, modelObjUrl
     loader.setMaterials(mtl);
   });
 
-  return <primitive object={obj} rotation-y={rotationX} rotation-x={rotationY / 10} />;
+  return <primitive object={obj} rotation-y={rotationX} rotation-x={rotationY} position={[0, 0, 0]} />;
 };
