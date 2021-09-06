@@ -32,8 +32,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-three-fiber": "^6.0.13",
-    "react-three-renderer": "^3.2.4",
-    "react-three-renderer-objects": "0.0.6",
     "signals": "^1.0.0",
     "three": "^0.132.2",
     "three-orbitcontrols-ts": "^0.1.2",
