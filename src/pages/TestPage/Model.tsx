@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useState } from 'react';
+import React from 'react';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { useLoader } from '@react-three/fiber';

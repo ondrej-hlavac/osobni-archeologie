@@ -39,15 +39,14 @@ const Spinner: React.FC = () => {
 };
 
 export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, frameDimensions, mtlUrl, objUrl }: CanvasProps) => {
-  // const modelObj = 'models/center/ngfx.obj';
-  // const modelMtl = 'models/center/ngfx.mtl';
   const [left, setLeft] = useState(position.x);
   const [top, setTop] = useState(position.y);
   const randomDirectionX = Math.random() > 0.5 ? DirectionX.Right : DirectionX.Left;
   const randomDirectionY = Math.random() > 0.5 ? DirectionY.Top : DirectionY.Bottom;
+  const randomRotation = Math.floor(Math.random() * 3699);
   const [directionX, setDirectionX] = useState(randomDirectionX);
   const [directionY, setDirectionY] = useState(randomDirectionY);
-  const [rotation, setRotation] = useState(0);
+  const [rotation, setRotation] = useState(randomRotation);
 
   useEffect(() => {
     if (position) {
@@ -77,7 +76,7 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
   }, [rotation]);
 
   const rotateModel = () => {
-    if (rotation <= 3599) {
+    if (rotation <= 35999) {
       setRotation(rotation + 1);
     } else {
       setRotation(0);
@@ -138,12 +137,12 @@ export const MyCanvas = ({ width: canvasWidth, height: canvasHeight, position, f
         top,
         width: `${canvasWidth}`,
         height: `${canvasHeight}`,
-        // backgroundColor: '#0e8a5a7f',
+        backgroundColor: '#0e8a5a7f',
         overflow: 'hidden',
       }}
     >
       <Suspense fallback={<Spinner />}>
-        <Canvas camera={{ fov: 75, position: [0, 30, 90], zoom: 10 }} style={{ height: `${canvasHeight}px`, width: `${canvasWidth}px` }}>
+        <Canvas camera={{ fov: 75, position: [0, 140, 150], zoom: 30 }} style={{ height: `${canvasHeight}px`, width: `${canvasWidth}px` }}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <ProjectionModel rotationX={rotation / 100} rotationY={rotation / 100} modelObjUrl={objUrl} modelMtlUrl={mtlUrl} />
