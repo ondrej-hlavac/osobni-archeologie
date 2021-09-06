@@ -4,21 +4,33 @@ import { MyCanvas } from '../../components/MyCanvas';
 
 const FindingData = [
   {
-    objUrl: 'models/center/ngfx.obj',
-    mtlUrl: 'models/center/ngfx.mtl',
+    objUrl: 'models/7_modelu/7_modelu/1/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/1/model.mtl',
   },
   {
-    objUrl: 'models/pfanner_orange/model.obj',
-    mtlUrl: 'models/pfanner_orange/model.mtl',
+    objUrl: 'models/7_modelu/7_modelu/2/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/2/model.mtl',
   },
   {
-    objUrl: 'models/nokia_cerna/model.obj',
-    mtlUrl: 'models/nokia_cerna/model.mtl',
+    objUrl: 'models/7_modelu/7_modelu/3/model.obj',
+    mtlUrl: 'models/7_modelu/7_modelu/3/model.mtl',
   },
-  {
-    objUrl: 'models/denicek/model.obj',
-    mtlUrl: 'models/denicek/model.mtl',
-  },
+  // {
+  //   objUrl: 'models/center/ngfx.obj',
+  //   mtlUrl: 'models/center/ngfx.mtl',
+  // },
+  // {
+  //   objUrl: 'models/pfanner_orange/model.obj',
+  //   mtlUrl: 'models/pfanner_orange/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/nokia_cerna/model.obj',
+  //   mtlUrl: 'models/nokia_cerna/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/denicek/model.obj',
+  //   mtlUrl: 'models/denicek/model.mtl',
+  // },
 ];
 
 export const ProjectionTwo = () => {
@@ -31,7 +43,7 @@ export const ProjectionTwo = () => {
     }
   }, []);
 
-  const canvasSize = 400;
+  const canvasSize = 1100;
 
   const randomStartPosition = () => {
     if (frameDimensions) {
