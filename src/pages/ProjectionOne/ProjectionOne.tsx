@@ -3,22 +3,22 @@ import { chakra } from '@chakra-ui/system';
 import { MyCanvas } from '../../components/MyCanvas';
 
 const FindingData = [
-  {
-    objUrl: 'models/ultraCenter1/model.obj',
-    mtlUrl: 'models/ultraCenter1/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter2/model.obj',
-    mtlUrl: 'models/ultraCenter2/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter3/model.obj',
-    mtlUrl: 'models/ultraCenter3/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter4/model.obj',
-    mtlUrl: 'models/ultraCenter4/model.mtl',
-  },
+  // {
+  //   objUrl: 'models/ultraCenter1/model.obj',
+  //   mtlUrl: 'models/ultraCenter1/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter2/model.obj',
+  //   mtlUrl: 'models/ultraCenter2/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter3/model.obj',
+  //   mtlUrl: 'models/ultraCenter3/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter4/model.obj',
+  //   mtlUrl: 'models/ultraCenter4/model.mtl',
+  // },
   // {
   //   objUrl: 'models/ultraCenter5/model.obj',
   //   mtlUrl: 'models/ultraCenter5/model.mtl',
@@ -43,37 +43,89 @@ const FindingData = [
   //   objUrl: 'models/ultraCenter10/model.obj',
   //   mtlUrl: 'models/ultraCenter10/model.mtl',
   // },
-  {
-    objUrl: 'models/ultraCenter11/model.obj',
-    mtlUrl: 'models/ultraCenter11/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter12/model.obj',
-    mtlUrl: 'models/ultraCenter12/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter13/model.obj',
-    mtlUrl: 'models/ultraCenter13/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter14/model.obj',
-    mtlUrl: 'models/ultraCenter14/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter15/model.obj',
-    mtlUrl: 'models/ultraCenter15/model.mtl',
-  },
-  {
-    objUrl: 'models/ultraCenter16/model.obj',
-    mtlUrl: 'models/ultraCenter16/model.mtl',
-  },
+  // {
+  //   objUrl: 'models/ultraCenter11/model.obj',
+  //   mtlUrl: 'models/ultraCenter11/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter12/model.obj',
+  //   mtlUrl: 'models/ultraCenter12/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter13/model.obj',
+  //   mtlUrl: 'models/ultraCenter13/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter14/model.obj',
+  //   mtlUrl: 'models/ultraCenter14/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter15/model.obj',
+  //   mtlUrl: 'models/ultraCenter15/model.mtl',
+  // },
+  // {
+  //   objUrl: 'models/ultraCenter16/model.obj',
+  //   mtlUrl: 'models/ultraCenter16/model.mtl',
+  // },
   // {
   //   objUrl: 'models/ultraCenter17/model.obj',
   //   mtlUrl: 'models/ultraCenter17/model.mtl',
   // },
+  // {
+  //   objUrl: 'models/ultraCenter18/model.obj',
+  //   mtlUrl: 'models/ultraCenter18/model.mtl',
+  // },
   {
-    objUrl: 'models/ultraCenter18/model.obj',
-    mtlUrl: 'models/ultraCenter18/model.mtl',
+    objUrl: 'models/final-1/model.obj',
+    mtlUrl: 'models/final-1/model.mtl',
+  },
+  {
+    objUrl: 'models/final-2/model.obj',
+    mtlUrl: 'models/final-2/model.mtl',
+  },
+  {
+    objUrl: 'models/final-3/model.obj',
+    mtlUrl: 'models/final-3/model.mtl',
+  },
+  {
+    objUrl: 'models/final-4/model.obj',
+    mtlUrl: 'models/final-4/model.mtl',
+  },
+  {
+    objUrl: 'models/final-5/model.obj',
+    mtlUrl: 'models/final-5/model.mtl',
+  },
+  {
+    objUrl: 'models/final-6/model.obj',
+    mtlUrl: 'models/final-6/model.mtl',
+  },
+  {
+    objUrl: 'models/final-7/model.obj',
+    mtlUrl: 'models/final-7/model.mtl',
+  },
+  {
+    objUrl: 'models/final-8/model.obj',
+    mtlUrl: 'models/final-8/model.mtl',
+  },
+  {
+    objUrl: 'models/final-9/model.obj',
+    mtlUrl: 'models/final-9/model.mtl',
+  },
+  {
+    objUrl: 'models/final-10/model.obj',
+    mtlUrl: 'models/final-10/model.mtl',
+  },
+  {
+    objUrl: 'models/final-11/model.obj',
+    mtlUrl: 'models/final-11/model.mtl',
+  },
+  {
+    objUrl: 'models/final-12/model.obj',
+    mtlUrl: 'models/final-12/model.mtl',
+  },
+  {
+    objUrl: 'models/final-13/model.obj',
+    mtlUrl: 'models/final-13/model.mtl',
   },
 ];
 
