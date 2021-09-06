@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Divider, Flex } from '@chakra-ui/react';
+import { Divider, Flex, Heading } from '@chakra-ui/react';
 import TagsList from '../TagsList';
 import axios from 'axios';
 import { headers, TAGS, TIME_TAGS } from '../../constants/api';
@@ -61,9 +61,9 @@ const TagsMenu = () => {
 
   return (
     <Flex spacing={6} flexWrap="wrap" justifyContent="center">
-      <TagsList tags={tags} link={routes.DETAIL} />
+      <TagsList tags={tags} link={routes.DETAIL} headline="ORIGIN" />
       <Divider color="black" my={1} />
-      <TagsList tags={timeTags} link={routes.DETAIL} />
+      <TagsList tags={timeTags} link={routes.DETAIL} headline="YEAR / AGE" />
     </Flex>
   );
 };

@@ -16,11 +16,11 @@ const TagsList = ({ tags, headline, link = false }: any) => {
   return (
     <>
       {headline && (
-        <Heading fontSize="16px" textDecoration="none" as="h3" mt={4}>
+        <Heading fontSize="16px" textDecoration="none" as="h3" mt={4} width="100%" textAlign="left">
           {headline}
         </Heading>
       )}
-      <Flex flexWrap="wrap" my={8} alignItems="flex-start" width="100%" textAlign="left">
+      <Flex flexWrap="wrap" mb={8} alignItems="flex-start" width="100%" textAlign="left">
         {sortedTags?.map((tag: any, index: number) => {
           return (
             <Tag
