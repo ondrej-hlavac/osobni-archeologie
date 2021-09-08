@@ -13,9 +13,6 @@ export const Header = () => {
       <Link href={routes.HOME} mx={0}>
         <Heading textAlign="center">Osobní Archeologie</Heading>
       </Link>
-      <Link href={routes.ADMIN} position="absolute" right={8} color="gray.100" _hover={{ color: 'teal.600' }}>
-        atmin
-      </Link>
     </Flex>
   );
 };
