@@ -12,6 +12,7 @@ import TestPage from './pages/TestPage';
 import { ProjectionOne } from './pages/ProjectionOne';
 import { ProjectionTwo } from './pages/ProjectionTwo';
 import { Header } from './components/Header';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 // import logo from './logo.svg';
 /* <img src={logo} className="App-logo" alt="logo" /> */
@@ -27,9 +28,9 @@ function App() {
           <Route path={`${routes.DETAIL}/:id`}>
             <DetailPage />
           </Route>
-          <Route path={routes.ADMIN}>
-            <Administration />
-          </Route>
+
+          <ProtectedRoute path={routes.ADMIN} component={Administration} />
+
           <Route path={routes.TEST}>
             <TestPage />
           </Route>

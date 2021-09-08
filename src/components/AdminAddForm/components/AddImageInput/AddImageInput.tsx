@@ -56,7 +56,7 @@ const AddImageInput = ({ updateForm }: AddImageInputProps) => {
   // };
 
   const onFileSelected = async (file: any) => {
-    console.log('file main comp', file);
+    // console.log('file main comp', file);
 
     // this.setState({appState: AppStates.UPLOADING_FILE});
     setUploadState(UploadStatus.UPLOADING_FILE);
@@ -79,12 +79,12 @@ const AddImageInput = ({ updateForm }: AddImageInputProps) => {
     });
     setUploadState(UploadStatus.WAITING_FOR_THUMBNAIL);
 
-    console.log('🚀 ~ file: AddImageInput.tsx ~ line 35 ~ onFileSelected ~ res', res, file);
+    // console.log('🚀 ~ file: AddImageInput.tsx ~ line 35 ~ onFileSelected ~ res', res, file);
 
     if (res) {
       // console.log('response after upload file', res);
       const { data } = await res;
-      console.log('🚀 ~ file: AddImageInput.tsx ~ line 77 ~ onFileSelected ~ responseBody', data.publicUrl);
+      // console.log('🚀 ~ file: AddImageInput.tsx ~ line 77 ~ onFileSelected ~ responseBody', data.publicUrl);
 
       // initStream(responseBody.documentId);
       setThumbnailUrl(data.publicUrl);
