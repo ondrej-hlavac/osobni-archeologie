@@ -1,13 +1,13 @@
-import { ChakraTheme, extendTheme } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
-export const customTheme = extendTheme<ChakraTheme>({
+export const customTheme = extendTheme({
   fonts: {
     heading: 'Source Code Pro',
     body: 'Source Code Pro',
   },
   styles: {
-    global: (props) => ({
+    global: (props: any) => ({
       body: {
         bg: mode('white', 'blue.800')(props),
         color: mode('purple.900', 'white')(props),
@@ -32,7 +32,7 @@ export const customTheme = extendTheme<ChakraTheme>({
   },
   components: {
     Heading: {
-      baseStyle: (props) => ({
+      baseStyle: (props: any) => ({
         textDecoration: 'underline',
         fontSize: '69px',
         color: mode('purple.900', 'white')(props),

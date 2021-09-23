@@ -1,23 +1,37 @@
 import React from 'react';
-import { Heading, Wrap } from '@chakra-ui/react';
+import { Flex, Heading } from '@chakra-ui/react';
 import Tag from '../Tag';
+import { routes } from '../../constants/routes';
 // import { routes } from '../../constants/routes';
 
-const TagsList = ({ tags, headline }: any) => {
-  if (!tags) {
+const TagsList = ({ tags, headline, link = false }: any) => {
+  if (!tags || !tags?.data?.length) {
     return null;
   }
 
+  const sortedTags = tags.data.sort((tagA: any, tagB: any) => {
+    return tagA.data.year - tagB.data.year;
+  });
+
   return (
     <>
-      <Heading fontSize="16px" textDecoration="none" as="h3" mt={4}>
-        {headline}
-      </Heading>
-      <Wrap my={8}>
-        {tags.data?.map((tag: any) => {
-          return <Tag color={`#${tag.data.color}`} key={tag.data.name} label={tag.data.name} />;
+      {headline && (
+        <Heading fontSize="16px" textDecoration="none" as="h3" mt={4} width="100%" textAlign="left">
+          {headline}
+        </Heading>
+      )}
+      <Flex flexWrap="wrap" mb={8} alignItems="flex-start" width="100%" textAlign="left">
+        {sortedTags?.map((tag: any, index: number) => {
+          return (
+            <Tag
+              color={`#${tag.data.color}`}
+              link={link ? `${routes.HOME}?tag=${tag?.ref?.['@ref']?.id}` : undefined}
+              key={`key_${tag.data.name}${index.toString()}`}
+              label={tag.data.name}
+            />
+          );
         })}
-      </Wrap>
+      </Flex>
     </>
   );
 };

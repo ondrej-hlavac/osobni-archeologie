@@ -1,0 +1,1 @@
+export { MyCanvas } from './MyCanvas';

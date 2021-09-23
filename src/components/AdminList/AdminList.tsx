@@ -36,7 +36,7 @@ const AdminList = () => {
               findingData={findingDoc.data}
               basicTag={basicTag.data}
               timeTag={timeTag.data}
-              imageUrl={drivko}
+              imageUrl={findingDoc.data.image_url}
             />
           );
         })}

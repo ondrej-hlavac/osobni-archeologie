@@ -78,7 +78,7 @@ const AdminAddForm = ({ hideForm }: AdminAddFormProps) => {
       <Divider my={8} />
 
       {/* ADD IMAGE */}
-      <AddImageInput />
+      <AddImageInput updateForm={updateForm} />
       <Divider my={8} />
 
       {/* FINDING NAME */}
