@@ -5,4 +5,5 @@ export const routes = {
   TEST: '/test',
   PROJECTOR_ONE: '/projector-one',
   PROJECTOR_TWO: '/projector-two',
+  DECIMATED: '/decimated',
 };

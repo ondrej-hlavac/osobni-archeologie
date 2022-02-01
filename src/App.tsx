@@ -13,6 +13,7 @@ import { ProjectionOne } from './pages/ProjectionOne';
 import { ProjectionTwo } from './pages/ProjectionTwo';
 import { Header } from './components/Header';
 import { ProtectedRoute } from './components/ProtectedRoute';
+import ProjectionDecimated from './pages/ProjectionDecimated';
 
 // import logo from './logo.svg';
 /* <img src={logo} className="App-logo" alt="logo" /> */
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path={routes.PROJECTOR_TWO}>
             <ProjectionTwo />
+          </Route>
+          <Route path={routes.DECIMATED}>
+            <ProjectionDecimated />
           </Route>
 
           <Route path={routes.HOME}>
