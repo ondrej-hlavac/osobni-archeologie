@@ -11,7 +11,7 @@ interface ModelProps {
   modelObj: string;
 }
 
-export const Model = ({ rotationX, rotationY, modelMtl, modelObj }: ModelProps) => {
+export const ModelTest = ({ rotationX, rotationY, modelMtl, modelObj }: ModelProps) => {
   const mtl = useLoader(MTLLoader, modelMtl);
   const obj = useLoader(OBJLoader, modelObj, (loader: any) => {
     mtl.preload();

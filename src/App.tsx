@@ -26,13 +26,13 @@ function App() {
         <Header />
 
         <Switch>
-          <Route path={`${routes.DETAIL}/:id`}>
+          <Route path={`${routes.DETAIL}/:id`} exact>
             <DetailPage />
           </Route>
 
-          <ProtectedRoute path={routes.ADMIN} component={Administration} />
+          <ProtectedRoute path={routes.ADMIN} component={Administration} exact />
 
-          <Route path={routes.TEST}>
+          <Route path={routes.TEST} exact>
             <TestPage />
           </Route>
 
@@ -47,7 +47,7 @@ function App() {
             <ProjectionDecimated />
           </Route>
 
-          <Route path={routes.HOME}>
+          <Route path={routes.HOME} exact>
             <Homepage />
           </Route>
         </Switch>

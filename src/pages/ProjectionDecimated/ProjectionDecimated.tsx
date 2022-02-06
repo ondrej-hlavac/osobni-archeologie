@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { Canvas, useLoader } from '@react-three/fiber';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
-import { Model } from '../TestPage/Model';
+import { ModelTest } from '../TestPage/Model';
 import { position } from '@chakra-ui/styled-system';
 // import { OrbitControls } from '@react-three/drei';
 
@@ -25,7 +25,6 @@ const ModelCenter = ({ rotateY, rotateX }: any) => {
   boundingBox.setFromObject(obj);
   boundingBox.getCenter(center);
   boundingBox.getSize(size);
-  console.log('🚀 ~ file: ProjectionDecimated.tsx ~ line 22 ~ ModelCenter ~ boundingBox', boundingBox);
 
   obj.position.set(-center.x, -center.y, -center.z);
 

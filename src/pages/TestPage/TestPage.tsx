@@ -1,7 +1,7 @@
 import React, { Suspense, useState } from 'react';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
-import { Model } from './Model';
+import { ModelTest } from './Model';
 
 const Spinner: React.FC = () => {
   return <span>spinner</span>;
@@ -23,7 +23,7 @@ const TestPage = () => {
         <Canvas camera={{ fov: 75, position: [-30, -30, -20], zoom: 10 }} style={{ height: '1100px' }}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <Model rotationX={rotateX} rotationY={rotateY} modelMtl="models/denicek/model.mtl" modelObj="models/denicek/model.obj" />
+          <ModelTest rotationX={rotateX} rotationY={rotateY} modelMtl="models/denicek/model.mtl" modelObj="models/denicek/model.obj" />
         </Canvas>
       </Suspense>
     </div>

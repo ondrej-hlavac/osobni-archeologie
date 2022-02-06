@@ -10,7 +10,7 @@ const DetailPage = () => {
         <Detail />
         <Divider my={6} />
       </div>
-      <List />
+      {/* <List /> */}
     </Container>
   );
 };
