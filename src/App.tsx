@@ -14,6 +14,7 @@ import { ProjectionTwo } from './pages/ProjectionTwo';
 import { Header } from './components/Header';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import ProjectionDecimated from './pages/ProjectionDecimated';
+import { ZlinOne } from './pages/ZlinOne';
 
 // import logo from './logo.svg';
 /* <img src={logo} className="App-logo" alt="logo" /> */
@@ -43,6 +44,10 @@ function App() {
           <Route path={routes.PROJECTOR_TWO}>
             <ProjectionTwo />
           </Route>
+          <Route path={routes.ZLIN_ONE}>
+            <ZlinOne />
+          </Route>
+
           <Route path={routes.DECIMATED}>
             <ProjectionDecimated />
           </Route>

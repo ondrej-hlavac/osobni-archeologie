@@ -6,7 +6,7 @@ import { routes } from '../../constants/routes';
 export const Header = () => {
   const { pathname } = useLocation();
 
-  if (pathname === routes.PROJECTOR_ONE || pathname === routes.PROJECTOR_TWO) return null;
+  if (pathname === routes.PROJECTOR_ONE || pathname === routes.PROJECTOR_TWO || pathname === routes.ZLIN_ONE) return null;
 
   return (
     <Flex p={{ base: 4, md: 8 }} grow={1} zIndex={99} justifyContent="center" borderBottom="1px solid #000000" position="relative">

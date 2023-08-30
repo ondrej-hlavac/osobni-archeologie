@@ -6,4 +6,5 @@ export const routes = {
   PROJECTOR_ONE: '/projector-one',
   PROJECTOR_TWO: '/projector-two',
   DECIMATED: '/decimated',
+  ZLIN_ONE: '/zlin-1',
 };
